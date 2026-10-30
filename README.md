@@ -4,8 +4,8 @@ Online booking, dispatch and payment for a home and office cleaning company in *
 Tech4Youth Edo, Module 06 individual project (#22).
 
 ## Live links
-- **Live site:** https://YOUR-LIVE-LINK.vercel.app  <!-- replace after deploying -->
-- **GitHub:** https://github.com/YOUR-USERNAME/cleanpro  <!-- replace -->
+- **Live site:** https://cleanpro-edotech.vercel.app/  
+- **GitHub:** https://github.com/JustynFX/cleanpro  
 
 ## The problem
 Cleaning jobs were assigned by phone call, so cleaners missed addresses, prices were inconsistent, and customers had no proof that the job was done.
