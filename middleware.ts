@@ -7,7 +7,7 @@ import { ROLE_HOME, ROUTE_ROLE, type Role } from "@/lib/roles";
  * It is NEVER read from a plain cookie, because browser cookies can be edited by anyone.
  */
 export async function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  const { pathname, search } = req.nextUrl;
   let res = NextResponse.next({ request: req });
 
   const supabase = createServerClient(
@@ -31,7 +31,7 @@ export async function middleware(req: NextRequest) {
     console.warn(`[REFUSED] unauthenticated -> ${pathname}`);
     const url = new URL("/login", req.url);
     url.searchParams.set("refused_reason", "unauthenticated");
-    url.searchParams.set("next", pathname);
+    url.searchParams.set("next", pathname + search);
     return NextResponse.redirect(url);
   }
 
